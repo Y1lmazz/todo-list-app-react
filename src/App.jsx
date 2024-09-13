@@ -60,6 +60,7 @@ function App() {
 
   return (
     <>
+      <h1>YAPILACAKLAR LİSTESİ</h1>
       <TodoInput handleAddTodos={handleAddTodos} inputText={inputText} setInputText={setInputText} />
       <TodoList handleDeleteTodos={handleDeleteTodos} todos={todos} inputText={inputText} setInputText={setInputText} handleEditTodos={handleEditTodos} />
     </>

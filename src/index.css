@@ -1,3 +1,15 @@
+h1 {
+  font-family: "Jersey 20", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 3.2rem;
+  letter-spacing: 3px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 .input-container {
   display: flex;
   align-items: center;
@@ -67,7 +79,18 @@
   justify-content: space-between;
   border-bottom: 1px solid #ddd;
   transition: background-color 0.3s ease;
-  padding: 20px
+  padding: 20px;
+  animation: fade-in .6s linear;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .list-item:last-child {
@@ -125,4 +148,52 @@
 
 .delete-btn:active {
   color: #bd2130;
+}
+
+/*! Responsive design*/
+@media screen and (max-width: 520px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .todo-list {
+    max-width: 90%;
+  }
+
+  .todo-input {
+    font-size: 16px;
+  }
+
+  .input-container {
+    max-width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .todo-input {
+    font-size: 14px;
+  }
+
+  .input-container {
+    max-width: 80%;
+  }
+
+  .add-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .todo-list {
+    max-width: 90%;
+  }
+
+  .list-item p {
+    font-size: 13px;
+  }
+
 }
